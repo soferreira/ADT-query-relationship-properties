@@ -1,4 +1,4 @@
-# ADT Explorer - Query the Properties of a Relationship
+# ADT - Query the Properties of a Relationship
 
 This sample demonstrates how to query a specific property of a relationship.
 
@@ -6,11 +6,11 @@ Similarly to the way digital twins have properties described, relationships can 
 
 For the purpose of this sample we will query the following ADT Model: [Example of a simplified Azure Digital Twins Model](https://github.com/RobertEichenseer/AzureDigitalTwins_Models).
 
-![Twin Graph](./images/twin_graph.png)
+![Twin Graph](./images/twin_graph.PNG)
 
 Consider the ```assignedProductionLine``` relationship that was defined with two properties, ```productionManager``` and ```inProduction```. Define the values for the properties.
 
-Finally, query the Twin Graph using the query bellow. The result will be relationships of type ```assignedProductionLine```, associated with the twin  ```ord_Muc_01'``` where the property ```inProduction = True```
+Finally, query the Twin Graph using the query bellow. The result will be relationships of type ```assignedProductionLine```, associated with the twin  ```ord_Muc_01``` where the property ```inProduction = True```.
 
 ```SQL
 SELECT T, CT 
@@ -20,4 +20,4 @@ WHERE T.$dtId = 'ord_Muc_01'
 AND R.inProduction = True
 ```
 
-![Twin Graph Result](./images/query_result.png)
+![Twin Graph Result](./images/query_result.PNG)
