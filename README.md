@@ -8,9 +8,9 @@ For the purpose of this sample we will query the following ADT Model: [Example o
 
 ![Twin Graph](./images/twin_graph.PNG)
 
-Consider the ```assignedProductionLine``` relationship that was defined with two properties, ```productionManager``` and ```inProduction```. Define the values for the properties.
+Consider the ```assignedProductionLine``` relationship that was defined with two properties, ```productionManager``` and ```inProduction```. Ensure that the properties are set.
 
-Finally, query the Twin Graph using the query bellow. The result will be relationships of type ```assignedProductionLine```, associated with the twin  ```ord_Muc_01``` where the property ```inProduction = True```.
+Finally, query the Twin Graph using the query bellow.
 
 ```SQL
 SELECT T, CT 
@@ -19,5 +19,7 @@ JOIN CT RELATED T.assignedProductionLine R
 WHERE T.$dtId = 'ord_Muc_01' 
 AND R.inProduction = True
 ```
+
+The result will be relationships of type ```assignedProductionLine```, associated with the twin  ```ord_Muc_01``` where the property ```inProduction = True```.
 
 ![Twin Graph Result](./images/query_result.PNG)
